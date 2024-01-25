@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -33,17 +34,24 @@ type Currency struct {
 }
 
 func setupDatabase() *gorm.DB {
-	dbURL := "postgres://labback:zPOMgNvInIVx8ImLMwmHrq5ngTPNOsIs@dpg-cmp4qvuct0pc73evuhbg-a/labback"
+	dbURL := os.Getenv("DATABASE_URL")
+	if dbURL == "" {
+		log.Fatal("Database URL is not set in environment variables")
+	}
 
 	db, err := gorm.Open(postgres.Open(dbURL), &gorm.Config{})
 	if err != nil {
-		panic("failed to connect database")
+		log.Fatalf("Failed to connect to database: %v", err)
 	}
 
-	db.AutoMigrate(&User{}, &Category{}, &ExpenseRecord{}, &Currency{})
+	err = db.AutoMigrate(&User{}, &Category{}, &ExpenseRecord{}, &Currency{})
+	if err != nil {
+		log.Fatalf("Failed to auto-migrate: %v", err)
+	}
 
 	return db
 }
+
 
 func CreateUser(db *gorm.DB, user User) (User, error) {
 	result := db.Create(&user)
