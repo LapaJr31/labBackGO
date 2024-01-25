@@ -14,8 +14,8 @@
 
 1. **Клонувати репозиторій**
    ```sh
-   git clone https://github.com/yourusername/expense-tracker-api.git
-   cd expense-tracker-api
+   git clone git@github.com:LapaJr31/labBackGO.git
+   cd labBackGo
    ```
 
    Збудувати та запустити за допомогою Docker Compose
