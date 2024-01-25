@@ -11,6 +11,6 @@ COPY *.go ./
 
 RUN go build -o /expense-tracker
 
-# EXPOSE 8080
+EXPOSE 8080
 
 CMD [ "/expense-tracker" ]
