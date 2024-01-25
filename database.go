@@ -47,7 +47,7 @@ func setupDatabase() *gorm.DB {
 	if err != nil {
 		panic("failed to connect database")
 	}
-	а
+	
 	db.AutoMigrate(&User{}, &Category{}, &ExpenseRecord{}, &Currency{})
 
 	return db
