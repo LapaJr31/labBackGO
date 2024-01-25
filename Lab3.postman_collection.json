@@ -1,0 +1,347 @@
+{
+    "info": {
+      "_postman_id": "unique-id",
+      "name": "Finance App API Collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Category Routes",
+        "item": [
+          {
+            "name": "Create a New Category",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{SERVER}}/category",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "category"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get All Categories",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{SERVER}}/category",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "category"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete a Category",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "{{SERVER}}/category/:id",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "category",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Currency Routes",
+        "item": [
+          {
+            "name": "Add a New Currency",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{SERVER}}/currency",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "currency"
+                ]
+              }
+            }
+          },
+          {
+            "name": "List All Currencies",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{SERVER}}/currency",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "currency"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete a Currency",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "{{SERVER}}/currency/:id",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "currency",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Record Routes",
+        "item": [
+          {
+            "name": "Create a New Record",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{SERVER}}/record",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "record"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Records with Filters",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{SERVER}}/record",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "record"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete a Record",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "{{SERVER}}/record/:id",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "record",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "User Routes",
+        "item": [
+          {
+            "name": "Create a New User",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{SERVER}}/user",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "user"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get User Details",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{SERVER}}/user/:id",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "user",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update User Information",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{SERVER}}/user/:id",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "user",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete a User",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "{{SERVER}}/user/:id",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "user",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "User Registration",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{SERVER}}/user/register",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "user",
+                  "register"
+                ]
+              }
+            }
+          },
+          {
+            "name": "User Login",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{SERVER}}/user/login",
+                "host": [
+                  "{{SERVER}}"
+                ],
+                "path": [
+                  "user",
+                  "login"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "variable": [
+      {
+        "key": "SERVER",
+        "value": "http://localhost:8080",
+        "type": "string"
+      }
+    ]
+  }
