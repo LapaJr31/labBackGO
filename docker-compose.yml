@@ -6,20 +6,8 @@ services:
     build: .
     ports:
       - "8080:8080"
-    depends_on:
-      - db
-
-
-  db:
-    image: postgres:12
-    ports:
-      - "5432:5432"
     environment:
-      POSTGRES_USER: labBack
-      POSTGRES_PASSWORD: somekindofpassword
-      POSTGRES_DB: labBack
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - DATABASE_URL=postgres://labback:zPOMgNvInIVx8ImLMwmHrq5ngTPNOsIs@dpg-cmp4qvuct0pc73evuhbg-a/labback
 
 volumes:
   postgres_data:
