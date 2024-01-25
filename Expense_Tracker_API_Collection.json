@@ -1,0 +1,421 @@
+{
+    "info": {
+        "name": "Expense Tracker API",
+        "description": "API collection for the Expense Tracker application",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create User",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"John Doe\",\n    \"password\": \"password123\",\n    \"DefaultCurrency\": \"USD\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/user",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "user"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get User",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "{{base_url}}/user/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "user",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update User",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"John Doe Updated\",\n    \"password\": \"newpassword123\",\n    \"DefaultCurrency\": \"EUR\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/user/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "user",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete User",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "{{base_url}}/user/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "user",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Category",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Food\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/category",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "category"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Category",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "{{base_url}}/category/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "category",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Categories",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "{{base_url}}/categories",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "categories"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Category",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Groceries\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/category/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "category",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Category",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "{{base_url}}/category/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "category",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Expense Record",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"UserID\": 1,\n    \"CategoryID\": 1,\n    \"Timestamp\": 1617948000,\n    \"Amount\": 50.0,\n    \"Currency\": \"USD\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/expense-record",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "expense-record"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Expense Record",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "{{base_url}}/expense-record/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "expense-record",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Expense Record",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"UserID\": 1,\n    \"CategoryID\": 2,\n    \"Timestamp\": 1618034400,\n    \"Amount\": 75.0,\n    \"Currency\": \"EUR\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/expense-record/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "expense-record",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Expense Record",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "{{base_url}}/expense-record/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "expense-record",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Currency",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"Name\": \"Euro\",\n    \"ExchangeRate\": 1.2\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/currency",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "currency"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Currency",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "{{base_url}}/currency/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "currency",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Currency",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"Name\": \"Euro\",\n    \"ExchangeRate\": 1.1\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/currency/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "currency",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Currency",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "{{base_url}}/currency/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "currency",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "User Login",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"John Doe\",\n    \"password\": \"password123\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/login",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "login"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Protected Route Example",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "{{base_url}}/protected",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "protected"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "User Registration",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Jane Doe\",\n    \"password\": \"securepassword123\",\n    \"DefaultCurrency\": \"USD\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/register",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "register"
+                    ]
+                }
+            }
+        }
+    ]
+}
