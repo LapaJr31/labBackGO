@@ -8,12 +8,7 @@ services:
       - "8080:8080"
     depends_on:
       - db
-    environment:
-      - DB_HOST=db
-      - DB_USER=labBack
-      - DB_PASSWORD=somekindofpassword
-      - DB_NAME=labBack
-      - DB_PORT=5432
+
 
   db:
     image: postgres:12
