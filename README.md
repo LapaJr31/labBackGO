@@ -18,6 +18,7 @@
    ```sh
    git clone git@github.com:LapaJr31/labBackGO.git
    cd labBackGo
+   git checkout localTest
    ```
 
    Збудувати та запустити за допомогою Docker Compose
