@@ -10,9 +10,9 @@ services:
       - db
     environment:
       - DB_HOST=db
-      - DB_USER=gorm
-      - DB_PASSWORD=gorm
-      - DB_NAME=gorm
+      - DB_USER=labBack
+      - DB_PASSWORD=somekindofpassword
+      - DB_NAME=labBack
       - DB_PORT=5432
 
   db:
@@ -20,9 +20,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: gorm
-      POSTGRES_PASSWORD: gorm
-      POSTGRES_DB: gorm
+      POSTGRES_USER: labBack
+      POSTGRES_PASSWORD: somekindofpassword
+      POSTGRES_DB: labBack
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
