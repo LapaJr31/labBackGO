@@ -1,7 +1,9 @@
 package main
 
 import (
+	"log"
 	"os"
+
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -51,7 +53,6 @@ func setupDatabase() *gorm.DB {
 
 	return db
 }
-
 
 func CreateUser(db *gorm.DB, user User) (User, error) {
 	result := db.Create(&user)
