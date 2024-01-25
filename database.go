@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
-	"os"
+
+	// "os"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -36,13 +36,7 @@ type Currency struct {
 }
 
 func setupDatabase() *gorm.DB {
-	dbHost := os.Getenv("DB_HOST")
-	dbUser := os.Getenv("DB_USER")
-	dbPassword := os.Getenv("DB_PASSWORD")
-	dbName := os.Getenv("DB_NAME")
-	dbPort := os.Getenv("DB_PORT")
-
-	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s ", dbHost, dbUser, dbPassword, dbName, dbPort)
+	dsn := "host=db user=labBack password=somekindofpassword dbname=labBack port=5432 sslmode=disable"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")
